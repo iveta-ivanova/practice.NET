@@ -22,7 +22,7 @@ jobs:
       run: dotnet restore
 
     - name: Build, test and publish web App
-      working-directory: practice.NET/TestWebApp/
+      working-directory: ./TestWebApp/
       run: 
         dotnet build --configuration Release
         dotnet test --configuration Release
