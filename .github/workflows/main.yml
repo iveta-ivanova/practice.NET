@@ -18,11 +18,11 @@ jobs:
         dotnet-version: '7.0'
 
     - name: Restore dependencies in web app
-      working-directory: ./TestWebApp/
+      working-directory: TestWebApp
       run: dotnet restore
 
     - name: Build, test and publish web App
-      working-directory: ./TestWebApp/
+      working-directory: TestWebApp
       run: 
         dotnet build --configuration Release
         dotnet test --configuration Release
