@@ -21,9 +21,9 @@ jobs:
       #working-directory: practice.NET/TestWebApp
       #run: dotnet restore
 
-    - name: Build, test and publish web App
-      working-directory: practice.NET/TestWebApp
-      run: 
-        dotnet build --configuration Release
-        dotnet test --configuration Release
-        dotnet publish -c Release -o publish
+    #- name: Build, test and publish web App
+    #  working-directory: practice.NET/TestWebApp
+    #  run: 
+    #    dotnet build --configuration Release
+    #    dotnet test --configuration Release
+    #    dotnet publish -c Release -o publish
