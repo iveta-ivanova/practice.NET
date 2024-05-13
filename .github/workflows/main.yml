@@ -21,9 +21,15 @@ jobs:
       working-directory: TestWebApp
       run: dotnet restore
 
-    - name: Build, test and publish web App
+    - name: Build web app
+      working-directory: TestWebApp
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Test web app
+      working-directory: TestWebApp
+      run: dotnet test --no-restore --verbosity normal
+      
+    - name: Publish web App
       working-directory: TestWebApp
       run: 
-        dotnet build --configuration Release
-        dotnet test --configuration Release
         dotnet publish -c Release -o publish
